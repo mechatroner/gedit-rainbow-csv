@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Rainbow csv syntax higlighting
+ Author: Ignatovich Dmitry
+-->
+
+<!--
+ Installation Instructions:
+
+ Place this file in your gtksourceview-2.0/language-specs directory
+ and make sure that it is readable for the user(s).
+
+ You must have root access to access to place it into 
+ /usr/share/gtksourceview-2.0/language-specs/
+ but as a regular user you can also put it under 
+ ~/.gnome2/gtksourceview-2.0/language-specs/
+
+ The syntax definition contains some styles that are not present in
+ the default style definitions. Therefore you must add the following lines
+ to every xml style file in /usr/share/gtksourceview-2.0/styles/
+ in the <style-scheme> section:
+
+    <style name="csv:red"             foreground="#FF0000" bold="true"/>
+    <style name="csv:blue"            foreground="#0000FF" bold="true"/>
+    <style name="csv:green"           foreground="#00A000" bold="true"/>
+    <style name="csv:magenta"         foreground="#FF00FF" bold="true"/>
+    <style name="csv:brown"           foreground="#964B00" bold="true"/>
+    <style name="csv:dark_red"        foreground="#FF0000" bold="false"/>
+    <style name="csv:dark_blue"       foreground="#0000FF" bold="false"/>
+    <style name="csv:dark_green"      foreground="#009000" bold="false"/>
+    <style name="csv:dark_magenta"    foreground="#FF00FF" bold="false"/>
+
+ (look for "Language specific styles")
+ You may want to adjust the colors according to your style template.
+ If you don't have root access copy the xml files to
+ ~/.gnome2/gtksourceview-2.0/styles/
+ and edit them there. Then you must probably go to 
+ Edit > Preferences > Font & colors to add the correct Color Schemes
+-->
+
+<language id="csv" _name="CSV" version="2.0" _section="Others">
+	<metadata>
+		<property name="globs">*.csv</property>
+	</metadata>
+
+    <styles>
+		<style id="srbcol1"           _name="NRBCol1"          map-to="csv:red"/>
+		<style id="srbcol2"           _name="NRBCol2"          map-to="csv:blue"/>
+		<style id="srbcol3"           _name="NRBCol3"          map-to="csv:green"/>
+		<style id="srbcol4"           _name="NRBCol4"          map-to="csv:magenta"/>
+		<style id="srbcol5"           _name="NRBCol5"          map-to="csv:brown"/>
+		<style id="srbcol6"           _name="NRBCol6"          map-to="csv:dark_red"/>
+		<style id="srbcol7"           _name="NRBCol7"          map-to="csv:dark_blue"/>
+		<style id="srbcol8"           _name="NRBCol8"          map-to="csv:dark_green"/>
+		<style id="srbcol9"           _name="NRBCol9"          map-to="csv:dark_magenta"/>
+        <!--
+		<style id="srbcol10"          _name="NRBCol10"         map-to="def:identifier"/>
+        -->
+    </styles>
+
+	<default-regex-options case-sensitive="false" />
+
+	<definitions>
+		<context id="rbgroup_10">
+            <match>([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*)(,|$)</match>
+			<include>
+				<context sub-pattern="1" style-ref="srbcol1"/>
+				<context sub-pattern="2" style-ref="srbcol2"/>
+				<context sub-pattern="3" style-ref="srbcol3"/>
+				<context sub-pattern="4" style-ref="srbcol4"/>
+				<context sub-pattern="5" style-ref="srbcol5"/>
+				<context sub-pattern="6" style-ref="srbcol6"/>
+				<context sub-pattern="7" style-ref="srbcol7"/>
+				<context sub-pattern="8" style-ref="srbcol8"/>
+				<context sub-pattern="9" style-ref="srbcol9"/>
+			</include>
+		</context>
+
+		<context id="rbgroup_9">
+            <match>([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*)(,|$)</match>
+			<include>
+				<context sub-pattern="1" style-ref="srbcol1"/>
+				<context sub-pattern="2" style-ref="srbcol2"/>
+				<context sub-pattern="3" style-ref="srbcol3"/>
+				<context sub-pattern="4" style-ref="srbcol4"/>
+				<context sub-pattern="5" style-ref="srbcol5"/>
+				<context sub-pattern="6" style-ref="srbcol6"/>
+				<context sub-pattern="7" style-ref="srbcol7"/>
+				<context sub-pattern="8" style-ref="srbcol8"/>
+				<context sub-pattern="9" style-ref="srbcol9"/>
+			</include>
+		</context>
+
+		<context id="rbgroup_8">
+            <match>([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*)(,|$)</match>
+			<include>
+				<context sub-pattern="1" style-ref="srbcol1"/>
+				<context sub-pattern="2" style-ref="srbcol2"/>
+				<context sub-pattern="3" style-ref="srbcol3"/>
+				<context sub-pattern="4" style-ref="srbcol4"/>
+				<context sub-pattern="5" style-ref="srbcol5"/>
+				<context sub-pattern="6" style-ref="srbcol6"/>
+				<context sub-pattern="7" style-ref="srbcol7"/>
+				<context sub-pattern="8" style-ref="srbcol8"/>
+			</include>
+		</context>
+
+		<context id="rbgroup_7">
+            <match>([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*)(,|$)</match>
+			<include>
+				<context sub-pattern="1" style-ref="srbcol1"/>
+				<context sub-pattern="2" style-ref="srbcol2"/>
+				<context sub-pattern="3" style-ref="srbcol3"/>
+				<context sub-pattern="4" style-ref="srbcol4"/>
+				<context sub-pattern="5" style-ref="srbcol5"/>
+				<context sub-pattern="6" style-ref="srbcol6"/>
+				<context sub-pattern="7" style-ref="srbcol7"/>
+			</include>
+		</context>
+
+		<context id="rbgroup_6">
+            <match>([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*)(,|$)</match>
+			<include>
+				<context sub-pattern="1" style-ref="srbcol1"/>
+				<context sub-pattern="2" style-ref="srbcol2"/>
+				<context sub-pattern="3" style-ref="srbcol3"/>
+				<context sub-pattern="4" style-ref="srbcol4"/>
+				<context sub-pattern="5" style-ref="srbcol5"/>
+				<context sub-pattern="6" style-ref="srbcol6"/>
+			</include>
+		</context>
+
+		<context id="rbgroup_5">
+            <match>([^,]*),([^,]*),([^,]*),([^,]*),([^,]*)(,|$)</match>
+			<include>
+				<context sub-pattern="1" style-ref="srbcol1"/>
+				<context sub-pattern="2" style-ref="srbcol2"/>
+				<context sub-pattern="3" style-ref="srbcol3"/>
+				<context sub-pattern="4" style-ref="srbcol4"/>
+				<context sub-pattern="5" style-ref="srbcol5"/>
+			</include>
+		</context>
+
+		<context id="rbgroup_4">
+            <match>([^,]*),([^,]*),([^,]*),([^,]*)(,|$)</match>
+			<include>
+				<context sub-pattern="1" style-ref="srbcol1"/>
+				<context sub-pattern="2" style-ref="srbcol2"/>
+				<context sub-pattern="3" style-ref="srbcol3"/>
+				<context sub-pattern="4" style-ref="srbcol4"/>
+			</include>
+		</context>
+
+		<context id="rbgroup_3">
+            <match>([^,]*),([^,]*),([^,]*)(,|$)</match>
+			<include>
+				<context sub-pattern="1" style-ref="srbcol1"/>
+				<context sub-pattern="2" style-ref="srbcol2"/>
+				<context sub-pattern="3" style-ref="srbcol3"/>
+			</include>
+		</context>
+
+		<context id="rbgroup_2">
+            <match>([^,]*),([^,]*)(,|$)</match>
+			<include>
+				<context sub-pattern="1" style-ref="srbcol1"/>
+				<context sub-pattern="2" style-ref="srbcol2"/>
+			</include>
+		</context>
+
+		<context id="rbgroup_1">
+            <match>([^,]*)(,|$)</match>
+			<include>
+				<context sub-pattern="1" style-ref="srbcol1"/>
+			</include>
+		</context>
+
+		<context id="csv" class="no-spell-check">
+			<include>
+				<context ref="rbgroup_10"/>
+				<context ref="rbgroup_9"/>
+				<context ref="rbgroup_8"/>
+				<context ref="rbgroup_7"/>
+				<context ref="rbgroup_6"/>
+				<context ref="rbgroup_5"/>
+				<context ref="rbgroup_4"/>
+				<context ref="rbgroup_3"/>
+				<context ref="rbgroup_2"/>
+				<context ref="rbgroup_1"/>
+			</include>
+		</context>
+
+	</definitions>
+</language>
