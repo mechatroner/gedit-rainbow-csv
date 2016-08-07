@@ -39,28 +39,28 @@
  Edit > Preferences > Font & colors to add the correct Color Schemes
 -->
 
-<language id="csv" _name="CSV" version="2.0" _section="Others">
+<language id="tsv" _name="TSV" version="2.0" _section="Others">
 	<metadata>
-		<property name="globs">*.csv</property>
+		<property name="globs">*.tsv</property>
 	</metadata>
 
     <styles>
-		<style id="srbcol1"           _name="NRBCol1"/>
-		<style id="srbcol2"           _name="NRBCol2"/>
-		<style id="srbcol3"           _name="NRBCol3"/>
-		<style id="srbcol4"           _name="NRBCol4"/>
-		<style id="srbcol5"           _name="NRBCol5"/>
-		<style id="srbcol6"           _name="NRBCol6"/>
-		<style id="srbcol7"           _name="NRBCol7"/>
-		<style id="srbcol8"           _name="NRBCol8"/>
-		<style id="srbcol9"           _name="NRBCol9"/>
+		<style id="srbcol1"           _name="NRBCol1"          map-to="csv:srbcol1"/>
+		<style id="srbcol2"           _name="NRBCol2"          map-to="csv:srbcol2"/>
+		<style id="srbcol3"           _name="NRBCol3"          map-to="csv:srbcol3"/>
+		<style id="srbcol4"           _name="NRBCol4"          map-to="csv:srbcol4"/>
+		<style id="srbcol5"           _name="NRBCol5"          map-to="csv:srbcol5"/>
+		<style id="srbcol6"           _name="NRBCol6"          map-to="csv:srbcol6"/>
+		<style id="srbcol7"           _name="NRBCol7"          map-to="csv:srbcol7"/>
+		<style id="srbcol8"           _name="NRBCol8"          map-to="csv:srbcol8"/>
+		<style id="srbcol9"           _name="NRBCol9"          map-to="csv:srbcol9"/>
     </styles>
 
 	<default-regex-options case-sensitive="false" />
 
 	<definitions>
 		<context id="rbgroup_10">
-            <match>([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*)(,|$)</match>
+            <match>([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)(\t|$)</match>
 			<include>
 				<context sub-pattern="1" style-ref="srbcol1"/>
 				<context sub-pattern="2" style-ref="srbcol2"/>
@@ -75,7 +75,7 @@
 		</context>
 
 		<context id="rbgroup_9">
-            <match>([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*)(,|$)</match>
+            <match>([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)(\t|$)</match>
 			<include>
 				<context sub-pattern="1" style-ref="srbcol1"/>
 				<context sub-pattern="2" style-ref="srbcol2"/>
@@ -90,7 +90,7 @@
 		</context>
 
 		<context id="rbgroup_8">
-            <match>([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*)(,|$)</match>
+            <match>([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)(\t|$)</match>
 			<include>
 				<context sub-pattern="1" style-ref="srbcol1"/>
 				<context sub-pattern="2" style-ref="srbcol2"/>
@@ -104,7 +104,7 @@
 		</context>
 
 		<context id="rbgroup_7">
-            <match>([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*)(,|$)</match>
+            <match>([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)(\t|$)</match>
 			<include>
 				<context sub-pattern="1" style-ref="srbcol1"/>
 				<context sub-pattern="2" style-ref="srbcol2"/>
@@ -117,7 +117,7 @@
 		</context>
 
 		<context id="rbgroup_6">
-            <match>([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*)(,|$)</match>
+            <match>([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)(\t|$)</match>
 			<include>
 				<context sub-pattern="1" style-ref="srbcol1"/>
 				<context sub-pattern="2" style-ref="srbcol2"/>
@@ -129,7 +129,7 @@
 		</context>
 
 		<context id="rbgroup_5">
-            <match>([^,]*),([^,]*),([^,]*),([^,]*),([^,]*)(,|$)</match>
+            <match>([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)(\t|$)</match>
 			<include>
 				<context sub-pattern="1" style-ref="srbcol1"/>
 				<context sub-pattern="2" style-ref="srbcol2"/>
@@ -140,7 +140,7 @@
 		</context>
 
 		<context id="rbgroup_4">
-            <match>([^,]*),([^,]*),([^,]*),([^,]*)(,|$)</match>
+            <match>([^\t]*)\t([^\t]*)\t([^\t]*)\t([^\t]*)(\t|$)</match>
 			<include>
 				<context sub-pattern="1" style-ref="srbcol1"/>
 				<context sub-pattern="2" style-ref="srbcol2"/>
@@ -150,7 +150,7 @@
 		</context>
 
 		<context id="rbgroup_3">
-            <match>([^,]*),([^,]*),([^,]*)(,|$)</match>
+            <match>([^\t]*)\t([^\t]*)\t([^\t]*)(\t|$)</match>
 			<include>
 				<context sub-pattern="1" style-ref="srbcol1"/>
 				<context sub-pattern="2" style-ref="srbcol2"/>
@@ -159,7 +159,7 @@
 		</context>
 
 		<context id="rbgroup_2">
-            <match>([^,]*),([^,]*)(,|$)</match>
+            <match>([^\t]*)\t([^\t]*)(\t|$)</match>
 			<include>
 				<context sub-pattern="1" style-ref="srbcol1"/>
 				<context sub-pattern="2" style-ref="srbcol2"/>
@@ -167,13 +167,13 @@
 		</context>
 
 		<context id="rbgroup_1">
-            <match>([^,]*)(,|$)</match>
+            <match>([^\t]*)(\t|$)</match>
 			<include>
 				<context sub-pattern="1" style-ref="srbcol1"/>
 			</include>
 		</context>
 
-		<context id="csv" class="no-spell-check">
+		<context id="tsv" class="no-spell-check">
 			<include>
 				<context ref="rbgroup_10"/>
 				<context ref="rbgroup_9"/>
