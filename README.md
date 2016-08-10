@@ -5,3 +5,7 @@ columns in csv file will be higlighted in different rainbow colors. This helps t
 
 ##Installation Instructions:
 Run `./install.sh`
+
+##Screenshots
+
+![screenshot](https://raw.githubusercontent.com/mechatroner/gtk_gedit_rainbow_csv/master/screenshot.png)
