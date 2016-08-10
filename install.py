@@ -81,13 +81,17 @@ def patch_styles():
     backup_dir = ensure_path(backup_path)
     style_files = os.listdir(styles_dir)
     style_files = [f for f in style_files if f.endswith('.xml')]
+    patched_any = False
     for f in style_files:
         fp = os.path.join(styles_dir, f)
         ftmp = os.path.join(backup_dir, '{}.new'.format(f))
         success = patch_hacky(fp, ftmp)
+        patched_any = patched_any or success
         if success:
             shutil.copyfile(fp, os.path.join(backup_dir, f))
             os.rename(ftmp, fp)
+    if patched_any:
+        print 'Done. Old style files are saved here:', backup_dir
 
 
 def copy_lang_files():
