@@ -8,7 +8,9 @@ For rainbow syntax higlighting to work, csv/tsv file is not required to have \*.
 
 ##Installation Instructions:
 
-Run `./install.py`
+1. Run `./install.py`
+2. Launch gedit. Go to `Edit->Preferences->Plugins` and enable "Rainbow csv" plugin
+3. Restart gedit
 
 ##Screenshots
 
