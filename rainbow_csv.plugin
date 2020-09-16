@@ -6,5 +6,5 @@ Name=Rainbow csv
 Description=Highlight csv/tsv columns in different rainbow colors
 Authors=Dmitry Ignatovich<mechatroner@yandex.ru>
 Copyright=Copyright © 2016 Dmitry I
-Website=https://github.com/mechatroner/gtk_gedit_rainbow_csv
+Website=https://github.com/mechatroner/gedit-rainbow-csv
 Version=0.1.0
