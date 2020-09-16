@@ -1,4 +1,4 @@
-# gtk_gedit_rainbow_csv
+# gedit-rainbow-csv
 Syntax highlighting rules for csv and tsv files in gtk (gedit)
 
 Columns in csv/tsv file will be higlighted in different rainbow colors. This helps to understand data patterns in csv files more quickly. Every 10-th column is not highlighted (has default black color)
@@ -14,4 +14,4 @@ For rainbow syntax higlighting to work, csv/tsv file is not required to have \*.
 
 ## Screenshots
 
-![screenshot](https://raw.githubusercontent.com/mechatroner/gtk_gedit_rainbow_csv/master/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/mechatroner/gedit-rainbow-csv/master/screenshot.png)
