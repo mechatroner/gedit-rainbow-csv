@@ -1,3 +1,6 @@
+#### This repository is not maitained.
+This repository is not maintained. I can transfer ownership of `gedit-rainbow-csv` if you are willing to support it, plese reach out if you have any questions about this.
+
 # gedit-rainbow-csv
 Syntax highlighting rules for csv and tsv files in gtk (gedit)
 
